@@ -19,6 +19,8 @@
 | handoff_reason | Only for handed_to_agent: live_status, booking_specific, personal_data, not_in_handbook, low_confidence, customer_requested |
 | csat | Post-chat rating 1–5, blank if the passenger skipped it. A few values are outside 1–5 |
 
+`sessions_clean.csv` is the same table after cleaning (27,600 rows): duplicates and test chats removed, language labels fixed, out-of-range CSAT blanked, plus `duration_sec` and `pilot_week`. It is the output of `sql/02_clean_view.sql`.
+
 ## agent_tickets.csv: one row per chat handed to an agent
 
 | Column | Meaning |
